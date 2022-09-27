@@ -1,0 +1,50 @@
+@use "../../presets" as *;
+@use "../../mixin" as *;
+
+.mobile-open {
+    height: 310px;
+    width: 335px;
+    padding: 16px 20px 20px;
+    background-color: $color-white;
+    border-radius: 20px;
+    position: fixed;
+    top: 5px;
+    right: 0;
+    z-index: 3;
+}
+
+.mobile-vision {
+    display: flex;
+    gap: 11px;
+
+    flex-direction: column;
+    text-align: center;
+
+    @include lg {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.vision {
+    display: block;
+}
+
+.blur {
+    filter: blur(2px);
+}
+
+.mobile {
+    background-color: $color-grey-bg;
+    padding-block: 11px;
+    border-radius: 10px;
+}
+
+.mobile:active {
+    background-color: $color-grey-bg-alt;
+}
+
+.link-hover {
+    color: $color-active-regular;
+}

@@ -1,0 +1,23 @@
+@use "mixin" as *;
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    &-info {
+        &__name {
+            font-weight: 500;
+            line-height: 21px;
+            letter-spacing: 0.01em;
+            color: $color-black;
+        }
+
+        &__description {
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            color: $color-footer-description;
+        }
+    }
+}

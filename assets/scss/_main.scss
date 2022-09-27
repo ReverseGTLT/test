@@ -1,0 +1,32 @@
+@use "mixin" as *;
+
+.main {
+    grid-area: main;
+    background-color: $bg-color-main;
+    padding-left: 71px;
+    padding-top: 36px;
+    &-title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        color: $color-black;
+    }
+    &-customers {
+        background-color: $color-white;
+        border-radius: 30px;
+        padding-left: 38px;
+        padding-top: 30px;
+        margin-right: 95px;
+        padding-bottom: 40px;
+        &__collumn {
+            display: flex;
+            gap: $gap;
+        }
+        &__cards {
+            display: flex;
+        }
+        &__card {
+            display: flex;
+        }
+    }
+}
