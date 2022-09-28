@@ -173,7 +173,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -503,7 +503,7 @@ ul {
           box-shadow: -3px 5px 3px black;
   position: fixed;
   top: 5px;
-  right: 0;
+  left: 0;
   z-index: 3;
 }
 
@@ -594,9 +594,56 @@ ul {
   .main-box {
     margin-inline: auto;
   }
+  .main-box__collumn {
+    display: none;
+  }
+  .main-box__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .main-box__card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 1px solid #9197B3;
+    border-radius: 10px;
+    padding-inline: 10px;
+  }
+  .main-box__card:first-of-type {
+    padding-top: 19px;
+  }
+  .main-box__card-text:nth-of-type(1) {
+    -ms-flex-preferred-size: 20px;
+        flex-basis: 20px;
+  }
+  .main-box__card-text:nth-of-type(2) {
+    -ms-flex-preferred-size: 20px;
+        flex-basis: 20px;
+  }
+  .main-box__card-text:nth-of-type(3) {
+    -ms-flex-preferred-size: 20px;
+        flex-basis: 20px;
+  }
+  .main-box__card-text:nth-of-type(4) {
+    -ms-flex-preferred-size: 20px;
+        flex-basis: 20px;
+  }
+  .main-box__card-text:nth-of-type(5) {
+    -ms-flex-preferred-size: 20px;
+        flex-basis: 20px;
+  }
   .main-footer {
     margin-inline: auto;
     margin-bottom: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .footer {
     margin: auto;
@@ -647,5 +694,20 @@ ul {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
+  }
+}
+
+@media (max-width: 575.8px) {
+  .main-customers {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-customers__form {
+    padding-top: 20px;
+  }
+  .main-box__cards {
+    grid-template-columns: 1fr;
   }
 }
