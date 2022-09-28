@@ -1,12 +1,15 @@
-@use "../../presets" as *;
-@use "../../mixin" as *;
+@use "mixin" as *;
+@use "media-mixin" as *;
+
 
 .mobile-open {
-    height: 310px;
+    height: 575px;
     width: 335px;
     padding: 16px 20px 20px;
     background-color: $color-white;
     border-radius: 20px;
+    border: 2px solid $color-black;
+    box-shadow: -3px 5px 3px black;
     position: fixed;
     top: 5px;
     right: 0;
@@ -16,7 +19,6 @@
 .mobile-vision {
     display: flex;
     gap: 11px;
-
     flex-direction: column;
     text-align: center;
 
@@ -36,15 +38,15 @@
 }
 
 .mobile {
-    background-color: $color-grey-bg;
+    border: 2px solid white;
     padding-block: 11px;
     border-radius: 10px;
 }
 
 .mobile:active {
-    background-color: $color-grey-bg-alt;
+    background-color: $bg-color-nav;
 }
 
 .link-hover {
-    color: $color-active-regular;
+    color: $color-nav;
 }
