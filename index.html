@@ -32,7 +32,7 @@
                         <span class="header-navbar__trigger-item"></span>
                     </div>
                     <ul class="header-navbar__list list" id="navList">
-                        <li class="list-item" id="listItem">
+                        <li class="list-item list-item--none" id="listItem">
                             <a class="list-item__link" href="#" id="mobileLink">
                                 <img class="list-item__link-image" src="image/key-square.svg" alt="Dashboard">
                                 <p class="list-item__link-text">Dashboard</p>
@@ -84,25 +84,102 @@
         <main class="main">
             <h1 class="main-title">Hello Evano 👋🏼,</h1>
             <div class="main-customers">
-                <h3 class="main-customers__title">All Customers</h3>
-                <p class="main-customers__headernote">Active Members</p>
-                <div class="main-customers__collumn">
-                    <p class="main-customers__collumn-name">name</p>
-                    <p class="main-customers__collumn-name">company</p>
-                    <p class="main-customers__collumn-name">phone</p>
-                    <p class="main-customers__collumn-name">email</p>
-                    <p class="main-customers__collumn-name">country</p>
-                    <p class="main-customers__collumn-name">status</p>
+                <div class="main-customers__info">
+                    <h3 class="main-customers__title">All Customers</h3>
+                    <p class="main-customers__headernote">Active Members</p>
                 </div>
-                <div class="main-customers__cards">
-                    <div class="main-customers__card">
-                        <p class="main-customers__card-text">Jane Cooper</p>
-                        <p class="main-customers__card-text">Microsoft</p>
-                        <p class="main-customers__card-text">(225) 555-0118</p>
-                        <p class="main-customers__card-text">jane@microsoft.com</p>
-                        <p class="main-customers__card-text">United States</p>
-                        <button class="main-customers__card-btn" type="button">Active</button>
+                <form class="main-customers__form" action="/search/" target="_blank">
+                    <input class="main-customers__form-input" type="hidden" name="searchid" value="808327">
+                    <input class="main-customers__form-input" type="search" name="text" required placeholder="Search">
+                </form>
+            </div>
+            <div class="main-box">
+                <div class="main-box__collumn">
+                    <p class="main-box__collumn-name">Customer Name</p>
+                    <p class="main-box__collumn-name">Company</p>
+                    <p class="main-box__collumn-name">Phone Number</p>
+                    <p class="main-box__collumn-name">Email</p>
+                    <p class="main-box__collumn-name">Country</p>
+                    <p class="main-box__collumn-name">Status</p>
+                </div>
+                <div class="main-box__cards">
+                    <div class="main-box__card">
+                        <p class="main-box__card-text">Jane Cooper</p>
+                        <p class="main-box__card-text">Microsoft</p>
+                        <p class="main-box__card-text">(225) 555-0118</p>
+                        <p class="main-box__card-text">jane@microsoft.com</p>
+                        <p class="main-box__card-text">United States</p>
+                        <button class="main-box__card-btn" type="button">Active</button>
                     </div>
+                    <div class="main-box__card">
+                        <p class="main-box__card-text">Floyd Miles</p>
+                        <p class="main-box__card-text">Yahoo</p>
+                        <p class="main-box__card-text">(205) 555-0100</p>
+                        <p class="main-box__card-text">floyd@yahoo.com</p>
+                        <p class="main-box__card-text">Kiribati</p>
+                        <button class="main-box__card-btn main-box__card-btn--inactive" type="button">Inactive</button>
+                    </div>
+                    <div class="main-box__card">
+                        <p class="main-box__card-text">Ronald Richards</p>
+                        <p class="main-box__card-text">Adobe</p>
+                        <p class="main-box__card-text">(302) 555-0107</p>
+                        <p class="main-box__card-text">ronald@adobe.com</p>
+                        <p class="main-box__card-text">Israel</p>
+                        <button class="main-box__card-btn main-box__card-btn--inactive" type="button">Inactive</button>
+                    </div>
+                    <div class="main-box__card">
+                        <p class="main-box__card-text">Marvin McKinney</p>
+                        <p class="main-box__card-text">Tesla</p>
+                        <p class="main-box__card-text">(252) 555-0126</p>
+                        <p class="main-box__card-text">marvin@tesla.com</p>
+                        <p class="main-box__card-text">Iran</p>
+                        <button class="main-box__card-btn" type="button">Active</button>
+                    </div>
+                    <div class="main-box__card">
+                        <p class="main-box__card-text">Jerome Bell</p>
+                        <p class="main-box__card-text">Google</p>
+                        <p class="main-box__card-text">(629) 555-0129</p>
+                        <p class="main-box__card-text">jerome@google.com</p>
+                        <p class="main-box__card-text">Réunion</p>
+                        <button class="main-box__card-btn" type="button">Active</button>
+                    </div>
+                    <div class="main-box__card">
+                        <p class="main-box__card-text">Kathryn Murphy</p>
+                        <p class="main-box__card-text">Microsoft</p>
+                        <p class="main-box__card-text">(406) 555-0120</p>
+                        <p class="main-box__card-text">kathryn@microsoft.com</p>
+                        <p class="main-box__card-text">Curaçao</p>
+                        <button class="main-box__card-btn" type="button">Active</button>
+                    </div>
+                    <div class="main-box__card">
+                        <p class="main-box__card-text">Jacob Jones</p>
+                        <p class="main-box__card-text">Yahoo</p>
+                        <p class="main-box__card-text">(208) 555-0112</p>
+                        <p class="main-box__card-text">jacob@yahoo.com</p>
+                        <p class="main-box__card-text">Brazil</p>
+                        <button class="main-box__card-btn" type="button">Active</button>
+                    </div>
+                    <div class="main-box__card">
+                        <p class="main-box__card-text">Kristin Watson</p>
+                        <p class="main-box__card-text">Facebook</p>
+                        <p class="main-box__card-text">(704) 555-0127</p>
+                        <p class="main-box__card-text">kristin@facebook.com</p>
+                        <p class="main-box__card-text">Åland Islands</p>
+                        <button class="main-box__card-btn main-box__card-btn--inactive" type="button">Inactive</button>
+                    </div>
+                </div>
+            </div>
+            <div class="main-footer">
+                <p class="main-footer__footnote">Showing data 1 to 8 of  256K entries</p>
+                <div class="main-footer__pages">
+                    <p class="main-footer__pages-btn"><a class="main-footer__pages-link" href="#"><</a></p>
+                    <p class="main-footer__pages-btn"><a class="main-footer__pages-link white current" href="#">1</a></p>
+                    <p class="main-footer__pages-btn"><a class="main-footer__pages-link" href="#">2</a></p>
+                    <p class="main-footer__pages-btn"><a class="main-footer__pages-link" href="#">3</a></p>
+                    <p class="main-footer__pages-btn"><a class="main-footer__pages-link" href="#">4</a></p>
+                    <p class="main-footer__pages-text">...</p>
+                    <p class="main-footer__pages-btn"><a class="main-footer__pages-link" href="#">40</a></p>
+                    <p class="main-footer__pages-btn"><a class="main-footer__pages-link" href="#">></a></p>
                 </div>
             </div>
         </main>

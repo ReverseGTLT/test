@@ -4,29 +4,237 @@
     grid-area: main;
     background-color: $bg-color-main;
     padding-left: 71px;
-    padding-top: 36px;
+    padding-top: 25px;
+    height: 1200px;
+
     &-title {
         font-weight: 500;
         font-size: 24px;
         line-height: 36px;
         color: $color-black;
+        max-width: 500px;
     }
+
     &-customers {
         background-color: $color-white;
-        border-radius: 30px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
         padding-left: 38px;
-        padding-top: 30px;
+        padding-top: 65px;
         margin-right: 95px;
         padding-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 53px;
+        max-width: 968px;
+
+        &__title {
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 33px;
+            color: $color-black;
+            padding-bottom: 7px;
+        }
+
+        &__headernote {
+            color: $color-main-headernote;
+        }
+
+        &__form {
+            &-input {
+                background-color: $bg-color-input;
+                border-radius: 10px;
+                border: none;
+                background-image: url(../../image/search\ 1.svg);
+                background-repeat: no-repeat;
+                width: 216px;
+                height: 38px;
+                padding-left: 40px;
+                background-position: 8px 9px;
+                padding-top: 2px;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: -0.01em;
+                color: $color-main-collumn-name;
+
+                &::-webkit-search-cancel-button {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &-box {
+        padding-left: 38px;
+        background-color: $color-white;
+
+        margin-right: 95px;
+        padding-bottom: 27px;
+        padding-right: 43px;
+        max-width: 968px;
+
         &__collumn {
+            position: relative;
             display: flex;
             gap: $gap;
+            justify-content: space-between;
+            padding-bottom: 13px;
+            margin-bottom: $gap;
+            border-bottom: 1px solid $color-separate;
+
+            &::before {
+                position: absolute;
+                content: "";
+                border-bottom: 1px solid $color-separate;
+                width: 38px;
+                bottom: -1px;
+                left: -38px;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                border-bottom: 1px solid $color-separate;
+                width: 43px;
+                bottom: -1px;
+                right: -43px;
+            }
+
+            &-name {
+                font-weight: 500;
+                color: $color-main-collumn-name;
+
+                &:nth-of-type(1) {
+                    flex-basis: 190px;
+                }
+
+                &:nth-of-type(2) {
+                    flex-basis: 137px;
+                }
+
+                &:nth-of-type(3) {
+                    flex-basis: 170px;
+                }
+
+                &:nth-of-type(4) {
+                    flex-basis: 232px;
+                }
+
+                &:nth-of-type(5) {
+                    flex-basis: 165px;
+                }
+
+                &:nth-of-type(6) {
+                    flex-basis: 85px;
+                }
+            }
         }
+
         &__cards {
             display: flex;
+            flex-direction: column;
         }
+
         &__card {
             display: flex;
+            align-items: center;
+            gap: $gap;
+            justify-content: space-between;
+            padding-bottom: $gap;
+            border-bottom: 1px solid $color-separate;
+
+            &:not(:first-of-type) {
+                padding-top: 19px;
+            }
+
+            &-text {
+                font-weight: 500;
+                color: $color-main-card-text;
+
+                &:nth-of-type(1) {
+                    flex-basis: 192px;
+                }
+
+                &:nth-of-type(2) {
+                    flex-basis: 139px;
+                }
+
+                &:nth-of-type(3) {
+                    flex-basis: 170px;
+                }
+
+                &:nth-of-type(4) {
+                    flex-basis: 235px;
+                }
+
+                &:nth-of-type(5) {
+                    flex-basis: 148px;
+                }
+            }
+
+            &-btn {
+                cursor: pointer;
+                background: $bg-color-card-btn;
+                border: 1px solid $bg-color-card-btn-border;
+                border-radius: 4px;
+                color: $color-main-card-btn;
+                width: 101px;
+                min-width: 80px;
+                height: 29px;
+
+                &--inactive {
+                    background: $bg-color-btn-inactive;
+                    border: 1px solid $color-main-card-btn-inactive;
+                    color: $color-main-card-btn-inactive;
+                }
+            }
+        }
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 38px;
+        background-color: $color-white;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        margin-right: 95px;
+        padding-bottom: $gap * 2;
+        padding-right: 43px;
+        max-width: 968px;
+        gap: $gap;
+
+        &__pages {
+            display: flex;
+            gap: 12px;
+            &-btn {
+                text-align: center;
+                border-radius: 4px;
+                padding-top: 2px;
+            }
+            &-link {
+                background: $bg-color-main-btn;
+                border: 1px solid $color-separate;
+                border-radius: 4px;
+                display: block;
+                color: $color-main-btn-link;
+                width: 25px;
+                height: 24px;
+                transition: 0.3s;
+                &:hover {
+                    background-color: lighten($color: #5932EA, $amount: 10);
+                    color: $color-white;
+                }
+                &:active {
+                    background-color: $bg-color-nav;
+                }
+            }
+        }
+        &__footnote {
+            color: $color-main-collumn-name;
+            font-weight: 500;
         }
     }
 }

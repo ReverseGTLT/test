@@ -4,11 +4,13 @@
     grid-area: footer;
     display: flex;
     gap: 12px;
-    align-items: center;
+    align-items: flex-end;
+    padding-bottom: 72px;
     &-info {
+        margin-bottom: 7px;
         &__name {
             font-weight: 500;
-            line-height: 21px;
+            font-size: 14px;
             letter-spacing: 0.01em;
             color: $color-black;
         }
